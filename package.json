@@ -1,0 +1,30 @@
+{
+  "name": "nodeliketty-testimpl",
+  "version": "1.0.0",
+  "description": "An Impl of nodeliketty for test.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniCoderGroup/nodeliketty-testimpl.git"
+  },
+  "keywords": [
+    "tty"
+  ],
+  "author": "_Kerman@UniCoder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UniCoderGroup/nodeliketty-testimpl/issues"
+  },
+  "homepage": "https://github.com/UniCoderGroup/nodeliketty-testimpl#readme",
+  "devDependencies": {
+    "typescript": "4.5.4"
+  },
+  "dependencies": {
+    "nodeliketty": "^1.0.2"
+  }
+}
