@@ -5,17 +5,23 @@ export default class TestImpl implements NodeLikeTty {
   y = 0;
   x = 0;
   resizeListeners: (() => void)[] = [];
-  _columns: number = 100;
+  private _columns: number = 100;
+  get columns(): number {
+    return this._columns;
+  }
   set columns(col: number) {
     this._columns = col;
     this.callResizeListener();
   }
-  _rows: number = 100;
+  private _rows: number = 100;
+  get rows(): number {
+    return this._rows;
+  }
   set rows(row: number) {
     this._rows = row;
     this.callResizeListener();
   }
-  callResizeListener(){
+  callResizeListener() {
     this.resizeListeners.forEach((value) => value());
   }
   on(_event: "resize", listener: () => void): this {
@@ -50,7 +56,7 @@ export default class TestImpl implements NodeLikeTty {
   }
   cursorTo(x: number, y?: number): boolean {
     this.x = x;
-    if (y!==undefined) this.y = y;
+    if (y !== undefined) this.y = y;
     return true;
   }
 }
